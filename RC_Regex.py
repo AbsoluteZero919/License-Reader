@@ -22,6 +22,8 @@ VIN = re.findall(VIN_pat, jdata)
 print('VIN:', VIN)
 
 name = re.findall(name_pat, jdata)
+for i in range(len(name)):
+	name[i] = name[i][3:-1]
 print('Name:', name)
 
 regdate = re.findall(regdate_pat, jdata)
